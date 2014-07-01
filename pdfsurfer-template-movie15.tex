@@ -1,0 +1,52 @@
+%% wsxpdf-template-movie15.tex
+ %
+ % template for LaTeX to generate PDFs from WebSurfer models
+ %
+ % (movie15 version)
+ %
+ % David Barnes, October 2012
+ %
+
+\documentclass{article}
+\usepackage[pdftex]{hyperref}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[3D]{movie15}
+\parindent=0pt
+\parskip=1.2\baselineskip
+\pagestyle{empty}
+
+\begin{document}
+
+TITLETEXT
+
+\vspace{0.12in}
+
+\begin{figure}[h]
+\begin{center}
+  \vspace{0.12in}
+  \includemovie[label=wsxfig,
+    poster,
+    3Dcoo=0.007216811180114746 -0.04447293281555176 -0.0332721471786499,
+    3Droo=6.881564140319824,
+    3Dviews2=pdfsurfer-s2views.txt,
+    3Djscript=s2plot-prc.js,
+    controls,
+    3Dlights=Headlamp,
+    3Dbg=BGCOLORS,
+    %autoplay,
+    3Drender=Solid,
+  ]{1.0\linewidth}{0.8\linewidth}{s2direct.prc}\\
+\end{center}
+\end{figure}
+
+IDENTIFY
+%\noindent \TextField[name=objectlabel, width=0.8\hsize]{Object:}
+
+TOGGLE
+
+FOOTER
+
+SAVEVIEWS
+
+
+\end{document}

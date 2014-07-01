@@ -1,0 +1,52 @@
+%% wsxpdf-template-media9.tex
+ %
+ % template for LaTeX to generate PDFs from WebSurfer models
+ % 
+ % (media9 version)
+ %
+ % David Barnes, October 2012
+ %
+
+\documentclass{article}
+\usepackage[pdftex]{hyperref}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{media9}
+\parindent=0pt
+\parskip=1.2\baselineskip
+\pagestyle{empty}
+
+\begin{document}
+
+TITLETEXT
+
+\vspace{0.12in}
+
+\begin{figure}[h]
+\begin{center}
+  \vspace{0.12in}
+  \includemedia[
+    label=wsxfig,
+    width=1.0\linewidth,
+    height=0.8\linewidth,
+    3Dcoo=0.007216811180114746 -0.04447293281555176 -0.0332721471786499,
+    3Droo=6.881564140319824,
+    3Dviews=pdfsurfer-s2views.txt,
+    add3Djscript=s2plot-prc.js,
+    3Dtoolbar,
+    3Dmenu,
+    activate=pageopen,
+    3Dlights=Headlamp,
+    3Dbg=BGCOLORS,
+    3Drender=Solid,
+  ]{}{s2direct.prc}
+\end{center}
+\end{figure}
+
+IDENTIFY
+%\noindent \TextField[name=objectlabel, width=0.8\hsize]{Object:}
+
+TOGGLE
+
+FOOTER
+
+\end{document}
